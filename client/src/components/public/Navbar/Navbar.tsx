@@ -1,17 +1,18 @@
 import { Box, Button, Drawer, List, ListItem, ListItemText } from '@mui/material'
+// import MenuIcon from '@material-ui/icons/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react'
 import '../public.css'
 
-export default function Navbar({ userProfile, sections, type }) {
+export default function Navbar({ userProfile, sections, type } : {userProfile : any ; sections : any; type : any} ) {
 
-    sections = sections.filter(section => section.visible === true)
+    sections = sections.filter((section : any) => section.visible === true)
 
     const [state, setState] = React.useState({
         right: false,
     });
 
-    const toggleDrawer = (anchor, open) => (event) => {
+    const toggleDrawer = (anchor : any, open : any) => (event : any) => {
         if (
             event &&
             event.type === 'keydown' &&
@@ -36,7 +37,7 @@ export default function Navbar({ userProfile, sections, type }) {
         routeLink = "/admin/preview/section/"
     }
 
-    const sectionLinksList = (anchor) => (
+    const sectionLinksList = (anchor : any) => (
         <Box
             className='drawer'
             role="presentation"
@@ -45,7 +46,7 @@ export default function Navbar({ userProfile, sections, type }) {
         >
 
             <List>
-                {sections.map(section => (
+                {sections.map((section : any) => (
                     <a className='quick-links' href={routeLink + section._id}  key={section._id}>
                         <ListItem className='quick-links' button key={section.sectionName}>
                             <ListItemText style={{textAlign: 'center'}} primary={section.sectionName} />
@@ -77,7 +78,7 @@ export default function Navbar({ userProfile, sections, type }) {
                                                     <ListItemText style={{textAlign: 'center'}} primary={"Home"} />
                                                 </ListItem>
                                     </a>
-                                    {sections.map(section => (
+                                    {sections.map((section :any) => (
                                         <a className='quick-links' href={routeLink + section._id}  key={section._id}>
                                             <ListItem className='quick-links' button key={section.sectionName}>
                                                 <ListItemText style={{textAlign: 'center'}} primary={section.sectionName} />

@@ -7,9 +7,9 @@ import Footer from '../../../components/public/Footer/Footer';
 import Section from '../../../components/public/Section/Section';
 import SectionLoading from '../../../components/public/Section/SectionLoading';
 
-export default function HomePage({userProfile , sections ,  type}) {
+export default function HomePage({userProfile , sections ,  type } : {userProfile : any; sections : any; type : any}) {
 
-  sections = sections.filter(section => section.visible === true);
+  sections = sections.filter((section : any) => section.visible === true);
 
     return (
      <div>
@@ -18,7 +18,7 @@ export default function HomePage({userProfile , sections ,  type}) {
 
 
         {sections.length > 0 ?
-          sections.map(section =>
+          sections.map((section : any)=>
             section.sectionContent.length > 0 ?
               <Section key={section._id} section={section}  />
               :

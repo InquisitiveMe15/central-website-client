@@ -6,13 +6,14 @@ import MobileIcon from '@mui/icons-material/Phone'
 
 import React from 'react'
 
-export default function Footer({userProfile}) {
+export default function Footer({userProfile}:{userProfile:any}) {
   return (
     <div className='footer theme-orange' id="contactus">
       <div className="footbox" style={{backgroundColor: '#E5E5E5'}}>
         <div className='aboutlocation'>
           <div className='contactus-footer'>
-            <h1 className='cont'><font color="#7E7E7E">Contact</font> Us</h1><br/>
+            {/* <h1 className='cont'><font color="#7E7E7E">Contact</font> Us</h1><br/> */}
+            <h1 className='cont' style={{color:"#7E7E7E"}}>Contact Us</h1><br/>
             <div className='line'></div>
             <br></br>
             <table>

@@ -4,7 +4,8 @@ import '../public.css'
 // import background from '../backgroundPublic.jpg'
 import { Discord, Linkedin, Instagram, Facebook} from 'react-bootstrap-icons';
 
-export default function Hero({userProfile}) {
+
+export default function Hero({userProfile}:{userProfile:any}) {
   let background = userProfile.posterSrc
 
   return (

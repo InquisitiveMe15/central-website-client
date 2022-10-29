@@ -1,4 +1,4 @@
-import { React } from 'react'
+// import { React } from 'react'
 import SectionChildCard from '../SectionChild/SectionChildCard';
 import ParticlesBg from 'particles-bg'
 import Carousel from "react-multi-carousel";
@@ -8,9 +8,9 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
-const Section = ({ section }) => {
+const Section = ({ section } : {section : any}) => {
 
-    section.sectionContent = section.sectionContent.filter(sectionChild => sectionChild.visible === true);
+    section.sectionContent = section.sectionContent.filter((sectionChild : any) => sectionChild.visible === true);
 
     // to alternate the colors of the section-children.
     let counter = 0;
@@ -62,7 +62,7 @@ const Section = ({ section }) => {
                         autoPlay={true}
                         infinite={true}
                     >
-                        {section.sectionContent.map(sectionChild =>
+                        {section.sectionContent.map((sectionChild : any) =>
                             <SectionChildCard
                                 key={sectionChild._id}
                                 sectionName={section.sectionName}
